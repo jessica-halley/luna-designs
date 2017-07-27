@@ -1,9 +1,9 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTableIfNoFileExists('cards', (table) => {
+  return knex.schema.createTableIfNotExists('cards', (table) => {
     table.increments('id').primary()
     table.string('name')
-    table.image('image')
+    table.string('image')
     table.string('description')
   })
 
