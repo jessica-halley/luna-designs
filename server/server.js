@@ -1,7 +1,7 @@
 var path = require('path')
 var express = require('express')
 var bodyParser = require('body-parser')
-var orgs = require('./routes/cards')
+var listCards = require('./routes/cards')
 const cors = require('cors')
 
 const corsOptions = {
@@ -16,5 +16,7 @@ var server = express()
 server.use(bodyParser.json())
 server.use(cors(corsOptions))
 server.use(express.static(path.join(__dirname, '../public')))
+
+server.use('/api/cards', listCards)
 
 module.exports = server

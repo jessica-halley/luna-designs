@@ -7,6 +7,7 @@ import {createBrowserHistory} from 'react-router'
 import Home from './Home'
 import Header from './Header'
 import printsList from './PrintsList'
+import About from './About'
 import CartList from './CartList'
 import NavBar from './Navbar'
 import SamsCheckout from './Checkout'
@@ -19,7 +20,8 @@ const App = () => {
       <div className='app-container'>
         <NavBar />
         <Route exact path='/' component={Home} />
-        <Route exact path='/Prints' component={printsList} />
+        <Route exact path='/About' component={About} />
+        <Route exact path='/Prints' component={printsList}  />
         <Route exact path='/CartList' component={CartList} />
         <Route exact path='/Checkout' component={SamsCheckout} />
       </div>
