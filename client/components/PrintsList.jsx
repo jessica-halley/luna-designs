@@ -1,25 +1,34 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import PrintListItem from './PrintListItem'
+import {Link} from 'react-router-dom'
 
-const printsList = (props) => (
-  <div id='printList'>
-    <p className="welcome">Welcome! Please select from our delicious selection and don't hesitate to let us know if we can answer any of your questions.</p>
-    {renderPrints(props.prints)}
-  </div>
-)
+import {getCards} from '../actions/getCards'
 
-function renderPrints (printArray) {
-  return printArray.map((print) => {
-    return <PrintListItem key={print.id} print={print} />
-  })
-}
 
-function mapState2Props(state) {
-  {console.log(state.cart)}
-  return {
-    prints: state.prints
+class ListAllCards extends React.Component {
+  componentDidMount () {
+    window.scrollTo(0, 0)
+    this.props.dispatch(getCards())
+  }
+
+  render () {
+    const {listAllCards} = this.props
+    return (
+      <div className='wallpaper-no-border'>
+        <div className='container'>
+          <div className='org-header'>
+            <h4>Consider recycling or donating your used items at any of these Wellington organisations:</h4>
+          </div>
+        </div>
+      </div>
+    )
   }
 }
 
-export default connect(mapState2Props)(printsList)
+function mapStateToProps (state) {
+  return {
+    listAllCards: state.listAllCards
+  }
+}
+
+export default connect(mapStateToProps)(ListAllCards)

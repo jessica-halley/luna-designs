@@ -30,6 +30,31 @@
   color: #D568FD;
 }
 
+.about-page {
+  float: left;
+  margin-right: 10%;
+}
+
+.about-title {
+  font-family: 'Dancing Script';
+  font-size: 60px;
+  font-weight: normal;
+}
+
+.sam-img{
+  display: block;
+  width: 20vh;
+  height: 20vh;
+}
+
+.about-text{
+  margin-left: 30%;
+  padding-top: 3%;
+  padding-right: 25%;
+  overflow: hidden;
+}
+
+
 
 body {
   width: 75%;
