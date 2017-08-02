@@ -4,20 +4,21 @@ import {Link} from 'react-router-dom'
 
 import {getCards} from '../actions/getCards'
 
-
-class ListAllCards extends React.Component {
+class Cards extends React.Component {
   componentDidMount () {
-    window.scrollTo(0, 0)
     this.props.dispatch(getCards())
   }
 
   render () {
-    const {listAllCards} = this.props
+    const {cards} = this.props
     return (
       <div className='wallpaper-no-border'>
-        <div className='container'>
-          <div className='org-header'>
-            <h4>Consider recycling or donating your used items at any of these Wellington organisations:</h4>
+        <div className='container category-grid-container'>
+          <div className="category-list-header">
+            <p>Happy shopping!</p>
+          </div>
+          <div className='categories-container'>
+            {cards.map((card, key) => renderCard(card, key))}
           </div>
         </div>
       </div>
@@ -25,10 +26,19 @@ class ListAllCards extends React.Component {
   }
 }
 
-function mapStateToProps (state) {
-  return {
-    listAllCards: state.listAllCards
-  }
+const renderCard = (card, key) => (
+  <div className="cards-box" key={key}>
+      <figure>
+        <img src={`${card.image}`}/>
+        <figcaption><h3>{card.name}</h3>
+          <p>{card.description}</p>
+        </figcaption>
+      </figure>
+  </div>
+)
+
+const mapStateToProps = (state) => {
+  return {cards: state.cards}
 }
 
-export default connect(mapStateToProps)(ListAllCards)
+export default connect(mapStateToProps)(Cards)
