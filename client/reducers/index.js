@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
-import listCards from './listCards'
+import cards from './cards'
 import cart from './cart'
 import page from './page'
 
 // import otherReducer from './other-reducer'
 
 export default combineReducers({
-  listCards,
+  cards,
   cart,
   page
 })
