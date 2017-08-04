@@ -1,8 +1,8 @@
 import request from 'superagent'
 
-export const listAllCards = (cards) => {
+export const recieveCards = (cards) => {
   return {
-    type: 'LIST_CARDS',
+    type: 'RECEIVE_CARDS',
     cards
   }
 }
@@ -16,7 +16,7 @@ export function getCards () {
           console.error(err.message)
           return
         }
-        dispatch(listAllCards(res.body))
+        dispatch(recieveCards(res.body))
       })
   }
 }

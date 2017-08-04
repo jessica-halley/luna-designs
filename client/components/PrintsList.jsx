@@ -1,8 +1,20 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
 
+import {Link} from 'react-router-dom'
 import {getCards} from '../actions/getCards'
+
+const renderCard = (card, key) => (
+  <div className="cards-box" key={key}>
+    <p>tst</p>
+      <figure>
+        <img src={'${card.image}'}/>
+        <figcaption><h3>{card.name}</h3>
+          <p>{card.description}</p>
+        </figcaption>
+      </figure>
+  </div>
+)
 
 class Cards extends React.Component {
   componentDidMount () {
@@ -25,17 +37,6 @@ class Cards extends React.Component {
     )
   }
 }
-
-const renderCard = (card, key) => (
-  <div className="cards-box" key={key}>
-      <figure>
-        <img src={`${card.image}`}/>
-        <figcaption><h3>{card.name}</h3>
-          <p>{card.description}</p>
-        </figcaption>
-      </figure>
-  </div>
-)
 
 const mapStateToProps = (state) => {
   return {cards: state.cards}

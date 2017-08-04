@@ -1,11 +1,9 @@
 
 const getCards = (db) => {
-  return db('cards')
-    .select('*')
+  return db('cards').select('*')
 }
 
 
 module.exports = {
   getCards
-
 }
