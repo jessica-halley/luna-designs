@@ -2,27 +2,27 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import {Link} from 'react-router-dom'
-import {getCards} from '../actions/getCards'
+import {getPrints} from '../actions/getPrints'
 
-const renderCard = (card, key) => (
-  <div className="cards-box" key={key}>
+const renderPrints = (print, key) => (
+  <div className="prints-box" key={key}>
     <p>tst</p>
       <figure>
-        <img src={'${card.image}'}/>
-        <figcaption><h3>{card.name}</h3>
-          <p>{card.description}</p>
+        <img src={'${print.image}'}/>
+        <figcaption><h3>{print.name}</h3>
+          <p>{print.description}</p>
         </figcaption>
       </figure>
   </div>
 )
 
-class Cards extends React.Component {
+class Prints extends React.Component {
   componentDidMount () {
-    this.props.dispatch(getCards())
+    this.props.dispatch(getPrints())
   }
 
   render () {
-    const {cards} = this.props
+    const {prints} = this.props
     return (
       <div className='wallpaper-no-border'>
         <div className='container category-grid-container'>
@@ -30,7 +30,7 @@ class Cards extends React.Component {
             <p>Happy shopping!</p>
           </div>
           <div className='categories-container'>
-            {cards.map((card, key) => renderCard(card, key))}
+            {prints.map((print, key) => renderPrint(print, key))}
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@ class Cards extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {cards: state.cards}
+  return {prints: state.prints}
 }
 
-export default connect(mapStateToProps)(Cards)
+export default connect(mapStateToProps)(Prints)

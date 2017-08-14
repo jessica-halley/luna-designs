@@ -5,8 +5,8 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 import {createBrowserHistory} from 'react-router'
 
 import Home from './Home'
-import Header from './Header'
-import printsList from './PrintsList'
+import Cards from './CardsList'
+import Prints from './PrintsList'
 import About from './About'
 import CartList from './CartList'
 import NavBar from './Navbar'
@@ -21,7 +21,8 @@ const App = () => {
         <NavBar />
         <Route exact path='/' component={Home} />
         <Route exact path='/About' component={About} />
-        <Route exact path='/Prints' component={printsList}  />
+        <Route exact path='/CardsList' component={Cards}  />
+        <Route exact path='/PrintsList' component={Prints}  />
         <Route exact path='/CartList' component={CartList} />
         <Route exact path='/Checkout' component={SamsCheckout} />
       </div>
