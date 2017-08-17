@@ -8,7 +8,6 @@ import Home from './Home'
 import Cards from './CardsList'
 import Prints from './PrintsList'
 import About from './About'
-import CartList from './CartList'
 import NavBar from './Navbar'
 import SamsCheckout from './Checkout'
 
@@ -23,7 +22,6 @@ const App = () => {
         <Route exact path='/About' component={About} />
         <Route exact path='/CardsList' component={Cards}  />
         <Route exact path='/PrintsList' component={Prints}  />
-        <Route exact path='/CartList' component={CartList} />
         <Route exact path='/Checkout' component={SamsCheckout} />
       </div>
     </Router>

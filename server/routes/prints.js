@@ -8,8 +8,8 @@ var printsDb = require('../db/data')
 router.get('/', (req, res) => {
   let db = req.app.get('db')
   printsDb.getPrints(db)
-    .then(cards => {
-      res.json(cards)
+    .then(prints => {
+      res.json(prints)
     })
     .catch((err) => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
