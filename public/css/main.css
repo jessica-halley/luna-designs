@@ -47,6 +47,18 @@
   height: 20vh;
 }
 
+.print-image{
+  display: block;
+  width: 20vh;
+  height: 20vh;
+}
+
+.card-image{
+  display: block;
+  width: 20vh;
+  height: 20vh;
+}
+
 .about-text{
   margin-left: 30%;
   padding-top: 3%;

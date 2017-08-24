@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-export const recieveCards = (cards) => {
+export const receiveCards = (cards) => {
   return {
     type: 'RECEIVE_CARDS',
     cards
@@ -16,7 +16,7 @@ export function getCards () {
           console.error(err.message)
           return
         }
-        dispatch(recieveCards(res.body))
+        dispatch(receiveCards(res.body))
       })
   }
 }
