@@ -15,6 +15,13 @@
   color: #000;
 }
 
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
+
 .container {
   background: url('') no-repeat;
   background-size: 82%;
@@ -42,6 +49,36 @@
 }
 
 .sam-img{
+  display: block;
+  width: 20vh;
+  height: 20vh;
+}
+
+.prints-box{
+  padding: 25px;
+  border: 1px solid powderblue;
+  margin: 10px;
+}
+
+.print-image{
+  display: block;
+  width: 40vh;
+  height: 40vh;
+  border-radius: 15%;
+}
+
+/*.icontainer {
+  height: 100px;
+  width: 500px;
+  background-color: powderblue;
+}*/
+
+
+
+
+
+
+.card-image{
   display: block;
   width: 20vh;
   height: 20vh;

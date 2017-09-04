@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-export const recievePrints = (prints) => {
+export const receivePrints = (prints) => {
   return {
     type: 'RECEIVE_PRINTS',
     prints
@@ -16,7 +16,8 @@ export function getPrints () {
           console.error(err.message)
           return
         }
-        dispatch(recievePrints(res.body))
+        console.info("Got prints")
+        dispatch(receivePrints(res.body))
       })
   }
 }

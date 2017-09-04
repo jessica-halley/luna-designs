@@ -21,11 +21,11 @@ const NavBar = (props) => (
         <li><a href="#/Home">HOME</a></li>
         <li><a href="#/About">ABOUT US</a></li>
         <li><a href="#/CardsList">CARDS</a></li>
-        <li><a href="#">PRINTS</a></li>
+        <li><a href="#/PrintsList">PRINTS</a></li>
         <li><a href="#">CONTACT US</a></li>
       </ul>
       <ul className="nav navbar-nav navbar-right">
-        <li><a href="#">Cart</a></li>
+        <li><a href="#/Checkout">Cart</a></li>
       </ul>
     </div>
   </div>

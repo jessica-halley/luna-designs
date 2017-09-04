@@ -11,11 +11,3 @@ export const navigate = (path) => {
     page: path
   }
 }
-
-export const addToCart = (path, prints) => {
-  return {
-    type: 'ADD_TO_CART',
-    page: path,
-    prints
-  }
-}

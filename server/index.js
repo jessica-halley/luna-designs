@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 var app = require('./server')
 
 var env = process.env.NODE_ENV || 'development'

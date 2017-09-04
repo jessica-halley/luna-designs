@@ -7,7 +7,7 @@ import {getCards} from '../actions/getCards'
 const renderCard = (card, key) => (
   <div className="cards-box" key={key}>
       <figure>
-        <img src={'${card.image}'}/>
+        <img src={card.image} className="card-image"/>
         <figcaption><h3>{card.name}</h3>
           <p>{card.description}</p>
         </figcaption>
@@ -22,6 +22,7 @@ class Cards extends React.Component {
 
   render () {
     const {cards} = this.props
+    console.log('I was triggered during render')
     return (
       <div className='wallpaper-no-border'>
         <div className='container category-grid-container'>
