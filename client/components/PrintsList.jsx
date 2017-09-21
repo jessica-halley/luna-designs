@@ -35,13 +35,11 @@ const renderPrint = (print, key) => (
 
 class Prints extends React.Component {
   componentDidMount () {
-    console.log('component mounting (prints)');
     this.props.dispatch(getPrints())
   }
 
   render () {
     const {prints} = this.props
-    console.log('rendering prints');
     return (
       <div className='wallpaper-no-border'>
           <div className="category-list-header"></div>

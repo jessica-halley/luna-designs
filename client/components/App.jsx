@@ -11,6 +11,7 @@ import Prints from './PrintsList'
 import About from './About'
 import NavBar from './Navbar'
 import SamsCheckout from './Checkout'
+import ContactForm from './Contact'
 import YourComponent from './test'
 
 
@@ -26,6 +27,7 @@ const App = () => {
         <Route exact path='/CardsList' component={Cards}  />
         <Route exact path='/PrintsList' component={Prints}  />
         <Route exact path='/Checkout' component={SamsCheckout} />
+        <Route exact path='/Contact' component={ContactForm} />
         <Route exact path='/test' component={YourComponent}  />
       </div>
     </Router>
