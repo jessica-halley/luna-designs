@@ -1,7 +1,13 @@
+body {
+    background: rgba(0, 0, 0, 0.6);
+    background-image: url('../images/full01.jpg');
+    background-attachment: fixed;
+}
+
 .headerLogo{
+  width: 60vh;
   display: block;
   margin: auto;
-  width: 50%;
 }
 
 .navbar{
@@ -9,6 +15,7 @@
   font-size: 15px;
   font-weight: bold;
   text-decoration-color: #000;
+
 }
 
 .nav{
@@ -25,16 +32,6 @@
 .container {
   background: url('') no-repeat;
   background-size: 82%;
-}
-
-.home-page {
-  padding-top: 20%;
-  padding-bottom: 50%;
-  padding-right: 15%;
-  font-family: 'Permanent Marker', cursive;
-  font-size: 80px;
-  text-align: center;
-  color: #D568FD;
 }
 
 .about-page {
@@ -55,16 +52,26 @@
 }
 
 .prints-box{
-  padding: 25px;
-  border: 1px solid powderblue;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 10px;
 }
 
 .print-image{
-  display: block;
   width: 40vh;
   height: 40vh;
   border-radius: 15%;
+  display: block;
+  margin: auto;
+}
+
+.fig-caption{
+  padding-top: 5vh;
+  font-family: 'Dancing Script';
+  font-size: 30px;
+  position: relative;
+  text-align: center;
 }
 
 /*.icontainer {
@@ -72,10 +79,6 @@
   width: 500px;
   background-color: powderblue;
 }*/
-
-
-
-
 
 
 .card-image{
@@ -91,65 +94,7 @@
   overflow: hidden;
 }
 
-
-
-body {
-  width: 75%;
-  margin: auto;
-}
-
-h1 {
-  margin-top: 30px;
-}
-
-.welcome {
-  margin-bottom: 40px;
-}
-
-.beer p {
-  margin: 5px 0;
-}
-
-.beer .name {
-  margin-top: 40px;
-  font-size: x-large;
-  font-weight: 300;
-}
-
-.beer p:last-child {
-  display: flex;
-  justify-content: space-between;
-  color: darkgray;
-}
-
-.beer .country {
-  font-style: italic;
-}
-
-.beer .abv {
-  font-style: italic;
-}
-
-.beer .cart-link {
-  text-align: right;
-}
-
-.cart table {
-  width: 100%;
-}
-
-.cart .update-input {
-  width: 40px;
-  text-align: center;
-  margin-bottom: 0px; /* skeleton override */
-}
-
-.cart tbody button {
-  border: 0;
-  padding-top: 10px;
-}
-
-.cart .actions {
-  display: flex;
-  justify-content: space-between;
+.quantityBox{
+  width: 50px;
+  margin-left: 5px;
 }

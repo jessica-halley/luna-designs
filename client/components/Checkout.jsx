@@ -1,15 +1,32 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {postContactForm} from '../actions/contactForm'
+import {getCards} from '../actions/getCards'
 
-class ContactForm extends React.Component {
+const renderCard = (card, key) => (
+  <div key={key}>
+    <div className="col-md-1"></div>
+    <div className="prints-box col col-md-5">
+      <figure>
+        <div className="icontainer">
+        <img src={card.image} className="card-image"/>
+        </div>
+        <figcaption>
+          <h2>{card.name}</h2>
+        </figcaption>
+      </figure>
+  </div>
+</div>
+)
+
+class SamsCheckout extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       form: {},
       submitted: false,
       message: '',
-      errorMessage: ''
+      errorMessage: '',
     }
   }
 
@@ -36,16 +53,60 @@ class ContactForm extends React.Component {
   renderForm () {
     return (
       <form className='contact-form' onSubmit={(e) => this.submitForm(e)}>
+        <h4 className='contact-us'>Place your order</h4>
+        <hr className='orange-hr' />
+        <div className="col col-sm-6">
+
+        <h5 className='contact-us'>Prints</h5>
+
+
+        <label className="labelone" htmlFor="beePrint">
+          Bee Print :
+          <input className="quantityBox" name="beePrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+        </label>
+
+        <input className="quantityBox" name="cactusPrint" type="number" onChange={(e) => this.updateFormDetails(e)}/>
+        <label className="labelone" htmlFor="cactusPrint">Cactus Print</label>
+
+        <input className="quantityBox" name="crayfishPrint" type="number" onChange={(e) => this.updateFormDetails(e)}/>
+        <label className="labelone" htmlFor="crayfishPrint">Crayfish Print</label>
+
+        <input className="quantityBox" name="friendsPrint" type="number" onChange={(e) => this.updateFormDetails(e)}/>
+        <label className="labelone" htmlFor="friendsPrint">Friends Are Like Stars Print</label>
+
+        <input className="quantityBox" name="heartPrint" type="number" onChange={(e) => this.updateFormDetails(e)}/>
+        <label className="labelone" htmlFor="heartPrint">Heart Print</label>
+
+        <input className="quantityBox" name="mountainPrint" type="number" onChange={(e) => this.updateFormDetails(e)}/>
+        <label className="labelone" htmlFor="mountainPrint">Move Mountains Print</label>
+
+        <h5 className='contact-us'>Cards</h5>
+
+        <input className="quantityBox" name="cupcakeCard" type="number" onChange={(e) => this.updateFormDetails(e)}/>
+        <label className="labelone" htmlFor="cupcakeCard">Cupcake Card</label>
+
+        <input className="quantityBox" name="cactusCard" type="number" onChange={(e) => this.updateFormDetails(e)}/>
+        <label className="labelone" htmlFor="cactusCard">Cactus Card</label>
+
+        <input className="quantityBox" name="heartCard" type="number" onChange={(e) => this.updateFormDetails(e)}/>
+        <label className="labelone" htmlFor="heartCard">Heart Card</label>
+
+        <input className="quantityBox" name="birthdayCard" type="number" onChange={(e) => this.updateFormDetails(e)}/>
+        <label className="labelone" htmlFor="birthdayCard">Happy Birthday Card</label>
+
+        </div>
+        <div className="col col-sm-6">
         <fieldset>
-          <h4 className='contact-us'>Contact us</h4>
-          <hr className='orange-hr' />
+
           <label className="labelone" htmlFor="name">Name: </label>
           <input name="name" onChange={(e) => this.updateFormDetails(e)}/>
           <label className="labelone" htmlFor="email">Email: </label>
+
           <input name="email" onChange={(e) => this.updateFormDetails(e)} />
           <label className="labelone" htmlFor="comments">Comments: </label>
           <textarea name="comments" onChange={(e) => this.updateFormDetails(e)}></textarea>
         </fieldset>
+        </div>
         <div className="send">
           <p className="contact-error-message">{this.state.errorMessage}</p>
           <button className="btn" type="submit" >Send Message</button><br/>
@@ -68,4 +129,4 @@ class ContactForm extends React.Component {
   }
 }
 
-export default connect()(ContactForm)
+export default connect()(SamsCheckout)
