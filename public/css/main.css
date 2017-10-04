@@ -96,5 +96,47 @@ body {
 
 .quantityBox{
   width: 50px;
-  margin-left: 5px;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+.labelone{
+  position: relative;
+  font-family: 'Inconsolata', monospace;
+  color: #342D27;
+}
+
+.contact-us{
+  padding-top: 5vh;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Permanent Marker', cursive;
+  color: #F18C27;
+  font-size: 25px;
+  position: relative;
+
+}
+
+.order-header{
+  padding-top: 5vh;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Permanent Marker', cursive;
+  color: #5E5953;
+  font-size: 50px;
+  position: reative;
+  text-align: center;
+}
+
+.submissionForm{
+  padding-top: 25%;
+}
+
+.btn{
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Permanent Marker', cursive;
+  color: #F18C27;
+}
+
+.orange-hr{
+  color: #F18C27;
 }

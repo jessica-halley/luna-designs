@@ -3,23 +3,9 @@ import {connect} from 'react-redux'
 import {postContactForm} from '../actions/contactForm'
 import {getCards} from '../actions/getCards'
 
-const renderCard = (card, key) => (
-  <div key={key}>
-    <div className="col-md-1"></div>
-    <div className="prints-box col col-md-5">
-      <figure>
-        <div className="icontainer">
-        <img src={card.image} className="card-image"/>
-        </div>
-        <figcaption>
-          <h2>{card.name}</h2>
-        </figcaption>
-      </figure>
-  </div>
-</div>
-)
 
 class SamsCheckout extends React.Component {
+
   constructor (props) {
     super(props)
     this.state = {
@@ -29,6 +15,7 @@ class SamsCheckout extends React.Component {
       errorMessage: '',
     }
   }
+
 
   updateFormDetails (e) {
     let form = this.state.form
@@ -53,7 +40,7 @@ class SamsCheckout extends React.Component {
   renderForm () {
     return (
       <form className='contact-form' onSubmit={(e) => this.submitForm(e)}>
-        <h4 className='contact-us'>Place your order</h4>
+        <h4 className='order-header'>Place your order.</h4>
         <hr className='orange-hr' />
         <div className="col col-sm-6">
 
@@ -62,42 +49,81 @@ class SamsCheckout extends React.Component {
 
         <label className="labelone" htmlFor="beePrint">
           Bee Print :
-          <input className="quantityBox" name="beePrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+          <div>
+            <input className="quantityBox" name="beePrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+          </div>
         </label>
 
-        <input className="quantityBox" name="cactusPrint" type="number" onChange={(e) => this.updateFormDetails(e)}/>
-        <label className="labelone" htmlFor="cactusPrint">Cactus Print</label>
+        <label className="labelone" htmlFor="catusPrint">
+          Catus Print :
+          <div>
+            <input className="quantityBox" name="catusPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+          </div>
+        </label>
 
-        <input className="quantityBox" name="crayfishPrint" type="number" onChange={(e) => this.updateFormDetails(e)}/>
-        <label className="labelone" htmlFor="crayfishPrint">Crayfish Print</label>
+        <label className="labelone" htmlFor="crayfishPrint">
+          Crayfish Print :
+          <div>
+            <input className="quantityBox" name="crayfishPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+          </div>
+          </label>
 
-        <input className="quantityBox" name="friendsPrint" type="number" onChange={(e) => this.updateFormDetails(e)}/>
-        <label className="labelone" htmlFor="friendsPrint">Friends Are Like Stars Print</label>
+        <label className="labelone" htmlFor="friendsPrint">
+          Friends Are Like Stars Print :
+          <div>
+            <input className="quantityBox" name="friendsPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+          </div>
+        </label>
 
-        <input className="quantityBox" name="heartPrint" type="number" onChange={(e) => this.updateFormDetails(e)}/>
-        <label className="labelone" htmlFor="heartPrint">Heart Print</label>
+        <label className="labelone" htmlFor="heartPrint">
+          Heart Print :
+          <div>
+            <input className="quantityBox" name="heartPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+          </div>
+        </label>
 
-        <input className="quantityBox" name="mountainPrint" type="number" onChange={(e) => this.updateFormDetails(e)}/>
-        <label className="labelone" htmlFor="mountainPrint">Move Mountains Print</label>
+        <label className="labelone" htmlFor="mountainPrint">
+          Move Moutains Print :
+          <div>
+            <input className="quantityBox" name="mountainPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+          </div>
+        </label>
 
         <h5 className='contact-us'>Cards</h5>
+          <hr className='orange-hr' />
 
-        <input className="quantityBox" name="cupcakeCard" type="number" onChange={(e) => this.updateFormDetails(e)}/>
-        <label className="labelone" htmlFor="cupcakeCard">Cupcake Card</label>
+          <label className="labelone" htmlFor="cupcakeCard">
+            Cupcake Card :
+            <div>
+              <input className="quantityBox" name="cupcakeCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+            </div>
+          </label>
 
-        <input className="quantityBox" name="cactusCard" type="number" onChange={(e) => this.updateFormDetails(e)}/>
-        <label className="labelone" htmlFor="cactusCard">Cactus Card</label>
+          <label className="labelone" htmlFor="cactusCard">
+            Cactus Card :
+            <div>
+              <input className="quantityBox" name="cactusCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+            </div>
+          </label>
 
-        <input className="quantityBox" name="heartCard" type="number" onChange={(e) => this.updateFormDetails(e)}/>
-        <label className="labelone" htmlFor="heartCard">Heart Card</label>
+          <label className="labelone" htmlFor="heartCard">
+            Heard Card :
+            <div>
+              <input className="quantityBox" name="heartCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+            </div>
+          </label>
 
-        <input className="quantityBox" name="birthdayCard" type="number" onChange={(e) => this.updateFormDetails(e)}/>
-        <label className="labelone" htmlFor="birthdayCard">Happy Birthday Card</label>
+          <label className="labelone" htmlFor="birthdayCard">
+            Birthday Card :
+            <div>
+              <input className="quantityBox" name="birthdayCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+            </div>
+          </label>
 
         </div>
         <div className="col col-sm-6">
         <fieldset>
-
+          <div className="submissionForm">
           <label className="labelone" htmlFor="name">Name: </label>
           <input name="name" onChange={(e) => this.updateFormDetails(e)}/>
           <label className="labelone" htmlFor="email">Email: </label>
@@ -105,7 +131,8 @@ class SamsCheckout extends React.Component {
           <input name="email" onChange={(e) => this.updateFormDetails(e)} />
           <label className="labelone" htmlFor="comments">Comments: </label>
           <textarea name="comments" onChange={(e) => this.updateFormDetails(e)}></textarea>
-        </fieldset>
+          </div>
+      </fieldset>
         </div>
         <div className="send">
           <p className="contact-error-message">{this.state.errorMessage}</p>

@@ -14353,36 +14353,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var renderCard = function renderCard(card, key) {
-  return _react2.default.createElement(
-    'div',
-    { key: key },
-    _react2.default.createElement('div', { className: 'col-md-1' }),
-    _react2.default.createElement(
-      'div',
-      { className: 'prints-box col col-md-5' },
-      _react2.default.createElement(
-        'figure',
-        null,
-        _react2.default.createElement(
-          'div',
-          { className: 'icontainer' },
-          _react2.default.createElement('img', { src: card.image, className: 'card-image' })
-        ),
-        _react2.default.createElement(
-          'figcaption',
-          null,
-          _react2.default.createElement(
-            'h2',
-            null,
-            card.name
-          )
-        )
-      )
-    )
-  );
-};
-
 var SamsCheckout = function (_React$Component) {
   _inherits(SamsCheckout, _React$Component);
 
@@ -14444,8 +14414,8 @@ var SamsCheckout = function (_React$Component) {
           } },
         _react2.default.createElement(
           'h4',
-          { className: 'contact-us' },
-          'Place your order'
+          { className: 'order-header' },
+          'Place your order.'
         ),
         _react2.default.createElement('hr', { className: 'orange-hr' }),
         _react2.default.createElement(
@@ -14460,86 +14430,127 @@ var SamsCheckout = function (_React$Component) {
             'label',
             { className: 'labelone', htmlFor: 'beePrint' },
             'Bee Print :',
-            _react2.default.createElement('input', { className: 'quantityBox', name: 'beePrint', type: 'number', placeholder: '0', onChange: function onChange(e) {
-                return _this2.updateFormDetails(e);
-              } })
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('input', { className: 'quantityBox', name: 'beePrint', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           ),
-          _react2.default.createElement('input', { className: 'quantityBox', name: 'cactusPrint', type: 'number', onChange: function onChange(e) {
-              return _this2.updateFormDetails(e);
-            } }),
           _react2.default.createElement(
             'label',
-            { className: 'labelone', htmlFor: 'cactusPrint' },
-            'Cactus Print'
+            { className: 'labelone', htmlFor: 'catusPrint' },
+            'Catus Print :',
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('input', { className: 'quantityBox', name: 'catusPrint', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           ),
-          _react2.default.createElement('input', { className: 'quantityBox', name: 'crayfishPrint', type: 'number', onChange: function onChange(e) {
-              return _this2.updateFormDetails(e);
-            } }),
           _react2.default.createElement(
             'label',
             { className: 'labelone', htmlFor: 'crayfishPrint' },
-            'Crayfish Print'
+            'Crayfish Print :',
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('input', { className: 'quantityBox', name: 'crayfishPrint', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           ),
-          _react2.default.createElement('input', { className: 'quantityBox', name: 'friendsPrint', type: 'number', onChange: function onChange(e) {
-              return _this2.updateFormDetails(e);
-            } }),
           _react2.default.createElement(
             'label',
             { className: 'labelone', htmlFor: 'friendsPrint' },
-            'Friends Are Like Stars Print'
+            'Friends Are Like Stars Print :',
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('input', { className: 'quantityBox', name: 'friendsPrint', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           ),
-          _react2.default.createElement('input', { className: 'quantityBox', name: 'heartPrint', type: 'number', onChange: function onChange(e) {
-              return _this2.updateFormDetails(e);
-            } }),
           _react2.default.createElement(
             'label',
             { className: 'labelone', htmlFor: 'heartPrint' },
-            'Heart Print'
+            'Heart Print :',
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('input', { className: 'quantityBox', name: 'heartPrint', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           ),
-          _react2.default.createElement('input', { className: 'quantityBox', name: 'mountainPrint', type: 'number', onChange: function onChange(e) {
-              return _this2.updateFormDetails(e);
-            } }),
           _react2.default.createElement(
             'label',
             { className: 'labelone', htmlFor: 'mountainPrint' },
-            'Move Mountains Print'
+            'Move Moutains Print :',
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('input', { className: 'quantityBox', name: 'mountainPrint', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           ),
           _react2.default.createElement(
             'h5',
             { className: 'contact-us' },
             'Cards'
           ),
-          _react2.default.createElement('input', { className: 'quantityBox', name: 'cupcakeCard', type: 'number', onChange: function onChange(e) {
-              return _this2.updateFormDetails(e);
-            } }),
+          _react2.default.createElement('hr', { className: 'orange-hr' }),
           _react2.default.createElement(
             'label',
             { className: 'labelone', htmlFor: 'cupcakeCard' },
-            'Cupcake Card'
+            'Cupcake Card :',
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('input', { className: 'quantityBox', name: 'cupcakeCard', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           ),
-          _react2.default.createElement('input', { className: 'quantityBox', name: 'cactusCard', type: 'number', onChange: function onChange(e) {
-              return _this2.updateFormDetails(e);
-            } }),
           _react2.default.createElement(
             'label',
             { className: 'labelone', htmlFor: 'cactusCard' },
-            'Cactus Card'
+            'Cactus Card :',
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('input', { className: 'quantityBox', name: 'cactusCard', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           ),
-          _react2.default.createElement('input', { className: 'quantityBox', name: 'heartCard', type: 'number', onChange: function onChange(e) {
-              return _this2.updateFormDetails(e);
-            } }),
           _react2.default.createElement(
             'label',
             { className: 'labelone', htmlFor: 'heartCard' },
-            'Heart Card'
+            'Heard Card :',
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('input', { className: 'quantityBox', name: 'heartCard', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           ),
-          _react2.default.createElement('input', { className: 'quantityBox', name: 'birthdayCard', type: 'number', onChange: function onChange(e) {
-              return _this2.updateFormDetails(e);
-            } }),
           _react2.default.createElement(
             'label',
             { className: 'labelone', htmlFor: 'birthdayCard' },
-            'Happy Birthday Card'
+            'Birthday Card :',
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('input', { className: 'quantityBox', name: 'birthdayCard', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           )
         ),
         _react2.default.createElement(
@@ -14549,29 +14560,33 @@ var SamsCheckout = function (_React$Component) {
             'fieldset',
             null,
             _react2.default.createElement(
-              'label',
-              { className: 'labelone', htmlFor: 'name' },
-              'Name: '
-            ),
-            _react2.default.createElement('input', { name: 'name', onChange: function onChange(e) {
-                return _this2.updateFormDetails(e);
-              } }),
-            _react2.default.createElement(
-              'label',
-              { className: 'labelone', htmlFor: 'email' },
-              'Email: '
-            ),
-            _react2.default.createElement('input', { name: 'email', onChange: function onChange(e) {
-                return _this2.updateFormDetails(e);
-              } }),
-            _react2.default.createElement(
-              'label',
-              { className: 'labelone', htmlFor: 'comments' },
-              'Comments: '
-            ),
-            _react2.default.createElement('textarea', { name: 'comments', onChange: function onChange(e) {
-                return _this2.updateFormDetails(e);
-              } })
+              'div',
+              { className: 'submissionForm' },
+              _react2.default.createElement(
+                'label',
+                { className: 'labelone', htmlFor: 'name' },
+                'Name: '
+              ),
+              _react2.default.createElement('input', { name: 'name', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } }),
+              _react2.default.createElement(
+                'label',
+                { className: 'labelone', htmlFor: 'email' },
+                'Email: '
+              ),
+              _react2.default.createElement('input', { name: 'email', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } }),
+              _react2.default.createElement(
+                'label',
+                { className: 'labelone', htmlFor: 'comments' },
+                'Comments: '
+              ),
+              _react2.default.createElement('textarea', { name: 'comments', onChange: function onChange(e) {
+                  return _this2.updateFormDetails(e);
+                } })
+            )
           )
         ),
         _react2.default.createElement(
