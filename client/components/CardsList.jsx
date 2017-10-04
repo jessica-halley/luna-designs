@@ -1,18 +1,22 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
 import {Link} from 'react-router-dom'
 import {getCards} from '../actions/getCards'
 
 const renderCard = (card, key) => (
-  <div className="cards-box" key={key}>
+  <div key={key}>
+    <div className="col-md-1"></div>
+    <div className="prints-box col col-md-5">
       <figure>
-        <img src={card.image} className="card-image"/>
-        <figcaption><h3>{card.name}</h3>
-          <p>{card.description}</p>
+        <div className="icontainer">
+        <img src={card.image} className="print-image"/>
+        </div>
+        <figcaption>
+          <h2 className="fig-caption">{card.name}</h2>
         </figcaption>
       </figure>
   </div>
+</div>
 )
 
 class Cards extends React.Component {
@@ -22,17 +26,10 @@ class Cards extends React.Component {
 
   render () {
     const {cards} = this.props
-    console.log('I was triggered during render')
     return (
       <div className='wallpaper-no-border'>
-        <div className='container category-grid-container'>
-          <div className="category-list-header">
-            <p>Happy shopping!</p>
-          </div>
-          <div className='categories-container'>
+          <div className="category-list-header"></div>
             {cards.map((card, key) => renderCard(card, key))}
-          </div>
-        </div>
       </div>
     )
   }
