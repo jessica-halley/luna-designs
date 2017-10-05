@@ -54,10 +54,10 @@ class SamsCheckout extends React.Component {
           </div>
         </label>
 
-        <label className="labelone" htmlFor="catusPrint">
-          Catus Print :
+        <label className="labelone" htmlFor="cactusPrint">
+          Cactus Print :
           <div>
-            <input className="quantityBox" name="catusPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+            <input className="quantityBox" name="cactusPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
           </div>
         </label>
 
@@ -92,32 +92,24 @@ class SamsCheckout extends React.Component {
         <h5 className='contact-us'>Cards</h5>
           <hr className='orange-hr' />
 
-          <label className="labelone" htmlFor="cupcakeCard">
-            Cupcake Card :
-            <div>
-              <input className="quantityBox" name="cupcakeCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-            </div>
-          </label>
+            <label className="labelone" htmlFor="cupcakeCard">
+                  Cupcake Card :
+                <input className="quantityBox" name="cupcakeCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+            </label>
 
           <label className="labelone" htmlFor="cactusCard">
             Cactus Card :
-            <div>
               <input className="quantityBox" name="cactusCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-            </div>
           </label>
 
           <label className="labelone" htmlFor="heartCard">
-            Heard Card :
-            <div>
+            Heart Card :
               <input className="quantityBox" name="heartCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-            </div>
           </label>
 
           <label className="labelone" htmlFor="birthdayCard">
             Birthday Card :
-            <div>
               <input className="quantityBox" name="birthdayCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-            </div>
           </label>
 
         </div>

@@ -96,13 +96,19 @@ body {
 
 .quantityBox{
   width: 50px;
-  display: block;
-  margin: auto;
-  position: relative;
+  display: inline-block;
+  float: right;
+  margin-right: 30%;
 }
 
 .labelone{
   position: relative;
+  padding-bottom: 10%;
+  font-family: 'Inconsolata', monospace;
+  color: #342D27;
+}
+
+.contact-submit-message{
   font-family: 'Inconsolata', monospace;
   color: #342D27;
 }
