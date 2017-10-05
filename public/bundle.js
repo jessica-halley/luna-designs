@@ -14723,13 +14723,13 @@ var ContactForm = function (_React$Component) {
           ),
           _react2.default.createElement(
             'button',
-            { className: 'btn', type: 'submit' },
+            { className: 'btn2', type: 'submit' },
             'Send Message'
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
             'button',
-            { className: 'btn', type: 'reset' },
+            { className: 'btn2', type: 'reset' },
             'Reset form'
           )
         )
