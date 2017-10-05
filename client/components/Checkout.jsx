@@ -49,75 +49,55 @@ class SamsCheckout extends React.Component {
 
         <label className="labelone" htmlFor="beePrint">
           Bee Print :
-          <div>
             <input className="quantityBox" name="beePrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
         </label>
 
-        <label className="labelone" htmlFor="catusPrint">
-          Catus Print :
-          <div>
-            <input className="quantityBox" name="catusPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
+        <label className="labelone" htmlFor="cactusPrint">
+          Cactus Print :
+            <input className="quantityBox" name="cactusPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
         </label>
 
         <label className="labelone" htmlFor="crayfishPrint">
           Crayfish Print :
-          <div>
             <input className="quantityBox" name="crayfishPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
           </label>
 
         <label className="labelone" htmlFor="friendsPrint">
           Friends Are Like Stars Print :
-          <div>
             <input className="quantityBox" name="friendsPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
         </label>
 
         <label className="labelone" htmlFor="heartPrint">
           Heart Print :
-          <div>
             <input className="quantityBox" name="heartPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
         </label>
 
         <label className="labelone" htmlFor="mountainPrint">
           Move Moutains Print :
-          <div>
             <input className="quantityBox" name="mountainPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
         </label>
 
         <h5 className='contact-us'>Cards</h5>
           <hr className='orange-hr' />
 
-          <label className="labelone" htmlFor="cupcakeCard">
-            Cupcake Card :
-            <div>
-              <input className="quantityBox" name="cupcakeCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-            </div>
-          </label>
+            <label className="labelone" htmlFor="cupcakeCard">
+                  Cupcake Card :
+                <input className="quantityBox" name="cupcakeCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+            </label>
 
           <label className="labelone" htmlFor="cactusCard">
             Cactus Card :
-            <div>
               <input className="quantityBox" name="cactusCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-            </div>
           </label>
 
           <label className="labelone" htmlFor="heartCard">
-            Heard Card :
-            <div>
+            Heart Card :
               <input className="quantityBox" name="heartCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-            </div>
           </label>
 
           <label className="labelone" htmlFor="birthdayCard">
             Birthday Card :
-            <div>
               <input className="quantityBox" name="birthdayCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-            </div>
           </label>
 
         </div>
