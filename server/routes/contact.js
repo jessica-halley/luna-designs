@@ -17,6 +17,24 @@ router.post('/', function (req, res) {
   if(req.body.cupcakeCard){
     order += 'CupCake Card: ' + req.body.cupcakeCard + '<br />';
   }
+  if(req.body.beePrint){
+    order += 'Bee Print: ' + req.body.beePrint + '<br />';
+  }
+  if(req.body.cactusPrint){
+    order += 'Cactus Print: ' + req.body.cactusPrint + '<br />';
+  }
+  if(req.body.crayfishPrint){
+    order += 'Crayfish Print: ' + req.body.crayfishPrint + '<br />';
+  }
+  if(req.body.heartPrint){
+    order += 'Heart Print: ' + req.body.heartPrint + '<br />';
+  }
+  if(req.body.friendsPrint){
+    order += 'Friends Are Like Stars Print: ' + req.body.friendsPrint + '<br />';
+  }
+  if(req.body.mountainPrint){
+    order += 'Move Moutains Print: ' + req.body.mountainPrint + '<br />';
+  }
 
   var apiKey = process.env.MAILGUN_API_KEY
   var domain = process.env.MAILGUN_DOMAIN

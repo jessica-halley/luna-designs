@@ -39,11 +39,11 @@ class ContactForm extends React.Component {
         <fieldset>
           <h4 className='contact-us'>Contact us</h4>
           <hr className='orange-hr' />
-          <label className="labelone" htmlFor="name">Name: </label>
+          <label className="labeltwo" htmlFor="name">Name: </label>
           <input name="name" onChange={(e) => this.updateFormDetails(e)}/>
-          <label className="labelone" htmlFor="email">Email: </label>
+          <label className="labeltwo" htmlFor="email">Email: </label>
           <input name="email" onChange={(e) => this.updateFormDetails(e)} />
-          <label className="labelone" htmlFor="comments">Comments: </label>
+          <label className="labeltwo" htmlFor="comments">Comments: </label>
           <textarea name="comments" onChange={(e) => this.updateFormDetails(e)}></textarea>
         </fieldset>
         <div className="send">

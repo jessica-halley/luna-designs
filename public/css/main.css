@@ -108,9 +108,20 @@ body {
   color: #342D27;
 }
 
-.contact-submit-message{
+.labeltwo{
+  position: relative;
   font-family: 'Inconsolata', monospace;
   color: #342D27;
+}
+
+.contact-submit-message{
+  padding-top: 5vh;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Permanent Marker', cursive;
+  color: #5E5953;
+  font-size: 25px;
+  position: reative;
+  text-align: center;
 }
 
 .contact-us{
@@ -135,12 +146,15 @@ body {
 
 .submissionForm{
   padding-top: 25%;
+  padding-left: 25%;
 }
 
 .btn{
   font-family: 'Inconsolata', monospace;
   font-family: 'Permanent Marker', cursive;
+  font-size: 23px;
   color: #F18C27;
+  padding-left: 15%;
 }
 
 .orange-hr{

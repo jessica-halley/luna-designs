@@ -49,44 +49,32 @@ class SamsCheckout extends React.Component {
 
         <label className="labelone" htmlFor="beePrint">
           Bee Print :
-          <div>
             <input className="quantityBox" name="beePrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
         </label>
 
         <label className="labelone" htmlFor="cactusPrint">
           Cactus Print :
-          <div>
             <input className="quantityBox" name="cactusPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
         </label>
 
         <label className="labelone" htmlFor="crayfishPrint">
           Crayfish Print :
-          <div>
             <input className="quantityBox" name="crayfishPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
           </label>
 
         <label className="labelone" htmlFor="friendsPrint">
           Friends Are Like Stars Print :
-          <div>
             <input className="quantityBox" name="friendsPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
         </label>
 
         <label className="labelone" htmlFor="heartPrint">
           Heart Print :
-          <div>
             <input className="quantityBox" name="heartPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
         </label>
 
         <label className="labelone" htmlFor="mountainPrint">
           Move Moutains Print :
-          <div>
             <input className="quantityBox" name="mountainPrint" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
-          </div>
         </label>
 
         <h5 className='contact-us'>Cards</h5>
