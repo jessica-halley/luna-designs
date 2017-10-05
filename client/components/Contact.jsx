@@ -48,8 +48,8 @@ class ContactForm extends React.Component {
         </fieldset>
         <div className="send">
           <p className="contact-error-message">{this.state.errorMessage}</p>
-          <button className="btn" type="submit" >Send Message</button><br/>
-          <button className="btn" type="reset">Reset form</button>
+          <button className="btn2" type="submit" >Send Message</button><br/>
+          <button className="btn2" type="reset">Reset form</button>
         </div>
       </form>
     )
