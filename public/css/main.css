@@ -89,9 +89,10 @@ body {
 
 .about-text{
   margin-left: 30%;
-  padding-top: 3%;
+  padding-top: 10%;
   padding-right: 25%;
   overflow: hidden;
+  position: inherit;
 }
 
 .quantityBox{
