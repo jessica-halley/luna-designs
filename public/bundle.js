@@ -14056,6 +14056,10 @@ var _Contact = __webpack_require__(135);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
+var _Footer = __webpack_require__(305);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
@@ -14072,7 +14076,8 @@ var App = function App() {
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/CardsList', component: _CardsList2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/PrintsList', component: _PrintsList2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/Contact', component: _Contact2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/Checkout', component: _Checkout2.default })
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/Checkout', component: _Checkout2.default }),
+      _react2.default.createElement(_Footer2.default, null)
     )
   );
 };
@@ -14267,7 +14272,7 @@ var renderCard = function renderCard(card, key) {
         _react2.default.createElement(
           'div',
           { className: 'icontainer' },
-          _react2.default.createElement('img', { src: card.image, className: 'print-image' })
+          _react2.default.createElement('img', { src: card.image, className: 'card-image' })
         ),
         _react2.default.createElement(
           'figcaption',
@@ -14506,9 +14511,25 @@ var SamsCheckout = function (_React$Component) {
           ),
           _react2.default.createElement(
             'label',
+            { className: 'labelone', htmlFor: 'happyBirthdayCard' },
+            'Happy Birthday Card :',
+            _react2.default.createElement('input', { className: 'quantityBox', name: 'happyBirthdayCard', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                return _this2.updateFormDetails(e);
+              } })
+          ),
+          _react2.default.createElement(
+            'label',
             { className: 'labelone', htmlFor: 'birthdayCard' },
             'Birthday Card :',
             _react2.default.createElement('input', { className: 'quantityBox', name: 'birthdayCard', type: 'number', placeholder: '0', onChange: function onChange(e) {
+                return _this2.updateFormDetails(e);
+              } })
+          ),
+          _react2.default.createElement(
+            'label',
+            { className: 'labelone', htmlFor: 'thankYouCard' },
+            'Thank You Card :',
+            _react2.default.createElement('input', { className: 'quantityBox', name: 'thankYouCard', type: 'number', placeholder: '0', onChange: function onChange(e) {
                 return _this2.updateFormDetails(e);
               } })
           )
@@ -14772,11 +14793,37 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Home = function Home(props) {
+var Home = function Home() {
   return _react2.default.createElement(
     'div',
-    { className: 'wallpaper' },
-    _react2.default.createElement('div', { className: 'container' })
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'home-page' },
+      _react2.default.createElement('img', { className: 'home-img', src: "/images/livingRoom.jpg" })
+    ),
+    _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'div',
+        { className: 'col-md-6' },
+        _react2.default.createElement(
+          'a',
+          { href: '#/PrintsList' },
+          _react2.default.createElement('img', { className: 'link-img', src: "/images/shopPrints.png" })
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'col-md-6' },
+        _react2.default.createElement(
+          'a',
+          { href: '#/CardsList' },
+          _react2.default.createElement('img', { className: 'link-img', src: "/images/shopCards.png" })
+        )
+      )
+    )
   );
 };
 
@@ -14839,7 +14886,7 @@ var NavBar = function NavBar(props) {
                 null,
                 _react2.default.createElement(
                   "a",
-                  { href: "#/Home" },
+                  { href: "#/" },
                   "HOME"
                 )
               ),
@@ -14942,7 +14989,7 @@ var renderPrint = function renderPrint(print, key) {
     _react2.default.createElement('div', { className: 'col-md-1' }),
     _react2.default.createElement(
       'div',
-      { className: 'prints-box col col-md-5' },
+      { className: 'prints-box col-md-5' },
       _react2.default.createElement(
         'figure',
         null,
@@ -33076,6 +33123,33 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 305 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer(props) {
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement('img', { className: 'link-img', src: "/images/bottomPic.png" })
+    );
+};
+
+exports.default = Footer;
 
 /***/ })
 /******/ ]);

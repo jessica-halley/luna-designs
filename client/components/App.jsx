@@ -11,6 +11,7 @@ import About from './About'
 import NavBar from './Navbar'
 import SamsCheckout from './Checkout'
 import ContactForm from './Contact'
+import Footer from './Footer'
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route exact path='/PrintsList' component={Prints}  />
         <Route exact path='/Contact' component={ContactForm} />
         <Route exact path='/Checkout' component={SamsCheckout} />
+        <Footer />
       </div>
     </Router>
   )

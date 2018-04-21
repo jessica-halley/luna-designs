@@ -5,7 +5,7 @@ body {
 }
 
 .headerLogo{
-  width: 60vh;
+  width: 40vh;
   display: block;
   margin: auto;
 }
@@ -29,9 +29,21 @@ body {
   position: absolute;
 }
 
-.container {
-  background: url('') no-repeat;
-  background-size: 82%;
+.home-img {
+  display: block;
+  width: 90%;
+  margin: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  margin-bottom: 50px;
+}
+
+.link-img {
+  display: block;
+  width: 85%;
+  margin: auto;
+  margin-bottom: 50px;
 }
 
 .about-page {
@@ -83,8 +95,10 @@ body {
 
 .card-image{
   display: block;
-  width: 20vh;
-  height: 20vh;
+  width: 60vh;
+  height: 60vh;
+  border-radius: 15%;
+  margin: auto;
 }
 
 .about-text{

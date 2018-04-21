@@ -9,7 +9,7 @@ const renderCard = (card, key) => (
     <div className="prints-box col col-md-5">
       <figure>
         <div className="icontainer">
-        <img src={card.image} className="print-image"/>
+        <img src={card.image} className="card-image"/>
         </div>
         <figcaption>
           <h2 className="fig-caption">{card.name}</h2>

@@ -95,9 +95,19 @@ class SamsCheckout extends React.Component {
               <input className="quantityBox" name="heartCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
           </label>
 
+          <label className="labelone" htmlFor="happyBirthdayCard">
+            Happy Birthday Card :
+              <input className="quantityBox" name="happyBirthdayCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+          </label>
+
           <label className="labelone" htmlFor="birthdayCard">
             Birthday Card :
               <input className="quantityBox" name="birthdayCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
+          </label>
+
+          <label className="labelone" htmlFor="thankYouCard">
+            Thank You Card :
+              <input className="quantityBox" name="thankYouCard" type="number" placeholder="0" onChange={(e) => this.updateFormDetails(e)}/>
           </label>
 
         </div>
