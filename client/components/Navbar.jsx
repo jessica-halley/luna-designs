@@ -17,7 +17,7 @@ const NavBar = (props) => (
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav">
-            <li><a href="#/Home">HOME</a></li>
+            <li><a href="#/">HOME</a></li>
             <li><a href="#/About">ABOUT US</a></li>
             <li><a href="#/CardsList">CARDS</a></li>
             <li><a href="#/PrintsList">PRINTS</a></li>

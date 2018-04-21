@@ -7,7 +7,7 @@ import {getPrints} from '../actions/getPrints'
 const renderPrint = (print, key) => (
   <div key={key}>
     <div className="col-md-1"></div>
-    <div className="prints-box col col-md-5">
+    <div className="prints-box col-md-5">
       <figure>
         <div className="icontainer">
           <img src={print.image} className="print-image"/>
